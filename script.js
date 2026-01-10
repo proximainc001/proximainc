@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// WhatsApp Product Links
-const buyButtons = document.querySelectorAll('.buy-button');
-buyButtons.forEach(button => {
-    button.addEventListener('click', function () {
-        const card = this.closest('.product-card');
-        const serviceName = card.getAttribute('data-service');
-        const whatsappNumber = '8801839045505'; // Replace with actual number
+
+// WhatsApp Product Card Click - Makes entire card clickable
+const productCards = document.querySelectorAll('.product-card');
+productCards.forEach(card => {
+    card.addEventListener('click', function (e) {
+        const serviceName = this.getAttribute('data-service');
+        const whatsappNumber = '8801839045505';
         const message = `হ্যালো, আমি ${serviceName} কিনতে চাই`;
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
