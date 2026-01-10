@@ -29,7 +29,7 @@ buyButtons.forEach(button => {
     button.addEventListener('click', function () {
         const card = this.closest('.product-card');
         const serviceName = card.getAttribute('data-service');
-        const whatsappNumber = 'YOUR_NUMBER'; // Replace with actual number
+        const whatsappNumber = '8801839045505'; // Replace with actual number
         const message = `হ্যালো, আমি ${serviceName} কিনতে চাই`;
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
